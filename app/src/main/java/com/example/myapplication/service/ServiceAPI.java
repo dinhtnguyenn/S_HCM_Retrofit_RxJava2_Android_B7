@@ -43,7 +43,7 @@ public interface ServiceAPI {
     Observable<ArrayList<Product>> GetAllProduct();
 
     @GET("api/product-detail")
-    Observable<ArrayList<Product>> GetDetailProduct(@Query("id") int id);
+    Observable<Product> GetDetailProduct(@Query("id") int id);
 
     @POST("api/add-product")
     Observable<Message> AddProduct(@Body Product product);
